@@ -8,24 +8,24 @@ client.DefaultRequestHeaders.Accept.Add(
     new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
 client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-var repositories = await ProcessRepositoriesAsync(client);
+var GamesList = await ProcessRepositoriesAsync(client);
 
-foreach (var repo in repositories)
+foreach (var game in GamesList)
 {
-    Console.WriteLine($"Title: {repo.Title}");
-    Console.WriteLine($"Year: {repo.Year}");
-    Console.WriteLine($"Description: {repo.Description}");
-    Console.WriteLine($"Image: {repo.Image}");
-    Console.WriteLine($"Consoles: {repo.Consoles}");
-    Console.WriteLine($"Emulator: {repo.Emulator}");
+    Console.WriteLine($"Title: {game.Title}");
+    Console.WriteLine($"Year: {game.Year}");
+    Console.WriteLine($"Description: {game.Description}");
+    Console.WriteLine($"Image: {game.Image}");
+    Console.WriteLine($"Consoles: {game.Consoles}");
+    Console.WriteLine($"Emulator: {game.Emulator}");
     Console.ReadLine();
 }
 
-static async Task<List<Repository>> ProcessRepositoriesAsync(HttpClient client)
+static async Task<List<GamesList>> ProcessRepositoriesAsync(HttpClient client)
 {
     await using Stream stream =
         await client.GetStreamAsync("http://localhost:3000/games");
-    var repositories =
-        await JsonSerializer.DeserializeAsync<List<Repository>>(stream);
-    return repositories ?? new();
+    var games =
+        await JsonSerializer.DeserializeAsync<List<GamesList>>(stream);
+    return games?? new();
 }

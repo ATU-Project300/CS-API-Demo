@@ -1,7 +1,8 @@
 using System;
 using System.Text.Json.Serialization;
 
-public sealed record class Repository(
+public sealed record class GamesList(
+
 	[property: JsonPropertyName("title")] string Title,
 	[property: JsonPropertyName("year")] int Year,
 	[property: JsonPropertyName("description")] string Description,

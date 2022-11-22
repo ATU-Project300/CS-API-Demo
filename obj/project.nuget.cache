@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8pSZpiuM/ks/UWO9NoQMHmcoyofWAglQa2pf/H3YFFMcvsJi2ga2cg/oFcf9CVNcxpco2eGFcsqgwVpEKrwl8Q==",
+  "dgSpecHash": "guIv7BmhgjrZjA1L00gdXzZ3os6U94jC9tcAVON3shi5GnAYGcNDJskaTDghgj1CxDJ4zppm0IjORZ2G84sgiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ross\\WebAPIClient\\WebAPIClient.csproj",
+  "projectFilePath": "C:\\Users\\Ross\\CS-API-Demo\\WebAPIClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
